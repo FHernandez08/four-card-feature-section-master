@@ -120,12 +120,14 @@ body {
 .first-line,
 .bolded {
   line-height: 1;
+  font-size: 20px;
 }
 
 .text .paragraph {
   text-align: center;
   padding-top: 10px;
   font-weight: var(--fw-light);
+  font-size: 14px;
 }
 
 /* card sections */
