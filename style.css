@@ -111,12 +111,15 @@ body {
 
 .text .first-line {
   font-weight: var(--fw-light);
-  font-size: 20px;
 }
 
 .text .bolded {
   font-weight: var(--fw-semibold);
-  font-size: 20px;
+}
+
+.first-line,
+.bolded {
+  line-height: 1;
 }
 
 .text .paragraph {
@@ -176,3 +179,38 @@ body {
   border-top: 3px solid var(--primary-blue);
 }
 /* desktop design */
+@media screen and (min-width: 1000px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .grid-item:last-child {
+    grid-column: 3;
+    grid-row: 1;
+    position: relative;
+    top: 50%;
+  }
+
+  .grid-item:nth-child(3) {
+    grid-column: 2;
+  }
+
+  .grid-item:nth-child(1) {
+    position: relative;
+    top: 50%;
+  }
+
+  .paragraph {
+    width: 500px;
+  }
+
+  .bolded,
+  .first-line {
+    font-size: 2.2rem;
+    width: 500px;
+    text-align: center;
+    line-height: 1.125;
+  }
+}
